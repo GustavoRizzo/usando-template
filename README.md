@@ -3,16 +3,28 @@ test applications using template
 
 site feito em angula, nomeado como "website"
 
-#Para rodar local
-ng serve
+## Installation
+```bash
+$ npm install
+```
 
-#Buildar
-ng build --prod
+## Rodando Desenvolvimento
+```bash
+$ ng serve
+```
 
-#Criar imagem
-docker image build -t website:prod .
+## Rodando Homologação
+```bash
+$ npm run buildhml
+$ docker image build -t website-hml .
+$ docker run -p 5200:80 --rm website-hml
+```
 
-#Rodar imagem
-docker run -p 3000:80 --rm website:prod
+## Rodando Produção
+```bash
+$ ng build --prod
+$ docker image build -t website-prd .
+$ docker run -p 6200:80 --rm website-prd
+```
 
 
