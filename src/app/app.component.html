@@ -7,30 +7,15 @@
     <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
 </div>
 
-<div id="wrapper">
+<!--Main Content Area-->
+<main id="content">
 
-    <app-header></app-header>
+    <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5">
+        <app-navegation></app-navegation>
+    </header>
 
-    <!--Main Content Area-->
-    <main id="content">
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
 
-
-        <app-intro></app-intro>
-
-        <app-gallery></app-gallery>
-
-        <app-content></app-content>
-
-        <app-testimonial></app-testimonial>
-
-        <app-clients></app-clients>
-
-        <app-pricing></app-pricing>
-
-        <app-footer></app-footer>
-
-    </main>
-    <!--End Main Content Area-->
-
-
-</div>
+</main>
+<!--End Main Content Area-->

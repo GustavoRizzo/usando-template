@@ -1,5 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { IntroComponent } from './intro/intro.component';
@@ -12,28 +13,24 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { SocialComponent } from './social/social.component';
 
-import { NavegationComponent } from './navegation/navegation.component';
-import { AppRoutingModule } from './app-routing.module';
+
+const routes: Routes =[
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: 'home', component: HeaderComponent },
+  { path: 'about', component: IntroComponent },
+  { path: 'services', component: ContentComponent },
+  { path: 'testimonials', component: TestimonialComponent },
+  { path: 'gallery', component: GalleryComponent },
+  { path: 'clients', component: ClientsComponent},
+  { path: 'pricing', component: PricingComponent }
+];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    IntroComponent,
-    GalleryComponent,
-    ContentComponent,
-    TestimonialComponent,
-    ClientsComponent,
-    PricingComponent,
-    FooterComponent,
-    HeaderComponent,
-    SocialComponent,
-    NavegationComponent
-  ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    CommonModule,
+    RouterModule.forRoot(routes)
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [],
+  exports: [ RouterModule ]
 })
-export class AppModule { }
+export class AppRoutingModule { }
