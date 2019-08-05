@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http'
 
+//Componentes
 import { AppComponent } from './app.component';
 import { IntroComponent } from './intro/intro.component';
 import { GalleryComponent } from './gallery/gallery.component';
@@ -15,6 +17,8 @@ import { SocialComponent } from './social/social.component';
 import { NavegationComponent } from './navegation/navegation.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ControleClassicoComponent } from './controle-classico/controle-classico.component';
+//Serviços
+import { ApiControleClassicoService } from './services/api-controle-classico.service';
 
 @NgModule({
   declarations: [
@@ -33,9 +37,10 @@ import { ControleClassicoComponent } from './controle-classico/controle-classico
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiControleClassicoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

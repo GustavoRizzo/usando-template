@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiControleClassicoService } from '../services/api-controle-classico.service';
+import { Observable } from '../../../node_modules/rxjs';
 
 @Component({
   selector: 'app-controle-classico',
@@ -7,7 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ControleClassicoComponent implements OnInit {
 
-  constructor() { }
+  listaUsuarios: any;
+
+  constructor( private apiControleClassico: ApiControleClassicoService ) { } 
+
+
+  getListaUsuarios(){
+    this.listaUsuarios = this.apiControleClassico.getUsers();
+  }
 
   ngOnInit() {
   }
