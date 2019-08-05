@@ -14,6 +14,7 @@ import { SocialComponent } from './social/social.component';
 
 import { NavegationComponent } from './navegation/navegation.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ControleClassicoComponent } from './controle-classico/controle-classico.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AppRoutingModule } from './app-routing.module';
     FooterComponent,
     HeaderComponent,
     SocialComponent,
-    NavegationComponent
+    NavegationComponent,
+    ControleClassicoComponent
   ],
   imports: [
     BrowserModule,
