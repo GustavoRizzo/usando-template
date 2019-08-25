@@ -9,13 +9,13 @@ import { Observable } from '../../../node_modules/rxjs';
 })
 export class ControleClassicoComponent implements OnInit {
 
-  listaUsuarios: any;
+  randomTestResp: any;
 
   constructor( private apiControleClassico: ApiControleClassicoService ) { } 
 
 
-  getListaUsuarios(){
-    this.listaUsuarios = this.apiControleClassico.getUsers();
+  getFuncaoMockadaCoordenadaRandom(){
+    this.randomTestResp = this.apiControleClassico.getFuncaoMockadaCoordenadaRandom();
   }
 
   ngOnInit() {

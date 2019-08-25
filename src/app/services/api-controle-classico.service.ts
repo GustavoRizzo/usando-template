@@ -10,7 +10,7 @@ export class ApiControleClassicoService {
   
   constructor( private _http : HttpClient) { }
 
-  getUsers() {
+  getFuncaoMockadaCoordenadaRandom() {
     return this._http.get( this.apiURL );
   }
 }
