@@ -7,17 +7,21 @@
     <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
 </div>
 
+<div id="wrapper">
+    
 <!--Main Content Area-->
-<main id="content">
-
-    <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5">
+    <main id="content">
+    
+        <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5">
+            
+            <app-navegation></app-navegation>
         
-        <app-navegation></app-navegation>
-
-    </header>
-
-    <router-outlet></router-outlet>
-    <app-footer></app-footer>
-
-</main>
-<!--End Main Content Area-->
+        </header>
+    
+        <router-outlet></router-outlet>
+        <app-footer></app-footer>
+    
+    </main>
+    <!--End Main Content Area-->
+    
+</div>
