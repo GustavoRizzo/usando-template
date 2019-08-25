@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiControleClassicoService {
 
-  apiURL = 'https://jsonplaceholder.typicode.com/users';
+  apiURL = 'http://127.0.0.1:5010/api/values';
   
   constructor( private _http : HttpClient) { }
 
