@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { CustomEncoder } from './services/CustomEncoder';
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -38,9 +40,13 @@ import { ApiControleClassicoService } from './services/api-controle-classico.ser
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [ApiControleClassicoService],
+  providers: [
+    ApiControleClassicoService,
+    CustomEncoder
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

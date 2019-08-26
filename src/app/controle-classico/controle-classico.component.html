@@ -45,12 +45,14 @@
                     <p>Retornos aleatórios dentro da função f(x) = 0.65 - (0.75 / (1 + x^2)) - 0.65 * x * atan(1/x)</p>
                 </div>
                 <ul>
-                    <li>Teste!</li>
-                    <li>
-                        <button (click)="getFuncaoMockadaCoordenadaRandom()">Testar</button>
+                    <li>Teste, escrevendo uma função no campo abaixo (ex: x+1)
+                        <input [(ngModel)]="in_str_funct">
                     </li>
                     <li>
-                        <div *ngFor="let res of randomTestResp | async">
+                        <button (click)="getFuncaoDefinidaCoordenadaRandom()">Testar</button>
+                    </li>
+                    <li>
+                        <div *ngFor="let res of randomTestResp2 | async">
                             {{res | json}}
                         </div>
 
@@ -60,6 +62,33 @@
             </div>
         </div>
         <!--Função de Controle Classico Block-->
+
+        <!--Função Mockada Coordenada Random Block-->
+        <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="pricing-block-content">
+                <h3>Controle Clássico</h3>
+                <p class="pricing-sub">Função Mockada Coordenada Random</p>
+                <div class="pricing">
+                    <div class="price">                        
+                    </div>
+                    <p>Retornos aleatórios dentro da função f(x) = 0.65 - (0.75 / (1 + x^2)) - 0.65 * x * atan(1/x)</p>
+                </div>
+                <ul>
+                    <li>Teste!</li>
+                    <li>
+                        <button (click)="getFuncaoSolve()">Testar</button>
+                    </li>
+                    <li>
+                        <div *ngFor="let res of resFuncaoSolve | async">
+                            {{res | json}}
+                        </div>
+
+                    </li>
+                </ul>
+                <a href="#" class="button">BUY TODAY</a>
+            </div>
+        </div>
+        <!--End Função Mockada Coordenada Random Block-->
 
     </div>
 </section>
