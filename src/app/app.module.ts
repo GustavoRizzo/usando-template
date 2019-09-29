@@ -4,6 +4,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CustomEncoder } from './services/CustomEncoder';
 
+//Material
+import { MaterialModule } from './material';
+
 //Componentes
 import { AppComponent } from './app.component';
 import { IntroComponent } from './intro/intro.component';
@@ -21,6 +24,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ControleClassicoComponent } from './controle-classico/controle-classico.component';
 //Serviços
 import { ApiControleClassicoService } from './services/api-controle-classico.service';
+import { TesteMaterialComponent } from './teste-material/teste-material.component';
 
 @NgModule({
   declarations: [
@@ -35,13 +39,15 @@ import { ApiControleClassicoService } from './services/api-controle-classico.ser
     HeaderComponent,
     SocialComponent,
     NavegationComponent,
-    ControleClassicoComponent
+    ControleClassicoComponent,
+    TesteMaterialComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MaterialModule
   ],
   providers: [
     ApiControleClassicoService,

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -10,7 +10,7 @@ import { ClientsComponent } from './clients/clients.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { HeaderComponent } from './header/header.component';
 import { ControleClassicoComponent } from './controle-classico/controle-classico.component';
-
+import { TesteMaterialComponent } from './teste-material/teste-material.component';
 
 const routes: Routes =[
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -21,7 +21,8 @@ const routes: Routes =[
   { path: 'gallery', component: GalleryComponent },
   { path: 'clients', component: ClientsComponent},
   { path: 'pricing', component: PricingComponent },
-  { path: 'controle-classico', component: ControleClassicoComponent}
+  { path: 'controle-classico', component: ControleClassicoComponent},
+  { path: 'teste-material', component: TesteMaterialComponent}
 ];
 
 @NgModule({
